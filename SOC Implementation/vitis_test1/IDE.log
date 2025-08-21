@@ -1,0 +1,91 @@
+14:01:26 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\testCodes\5934_SoC\hw3_final\vitis_test1\temp_xsdb_launch_script.tcl
+14:01:26 INFO  : Platform repository initialization has completed.
+14:01:26 INFO  : Registering command handlers for Vitis TCF services
+14:01:28 INFO  : XSCT server has started successfully.
+14:01:28 INFO  : Successfully done setting XSCT server connection channel  
+14:01:28 INFO  : plnx-install-location is set to ''
+14:01:28 INFO  : Successfully done query RDI_DATADIR 
+14:01:28 INFO  : Successfully done setting workspace for the tool. 
+14:01:56 INFO  : Result from executing command 'getProjects': test1_wrapper
+14:01:56 INFO  : Result from executing command 'getPlatforms': 
+14:01:56 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:01:57 INFO  : Platform 'test1_wrapper' is added to custom repositories.
+14:01:58 INFO  : Platform 'test1_wrapper' is added to custom repositories.
+14:02:38 INFO  : Result from executing command 'getProjects': test1_wrapper
+14:02:38 INFO  : Result from executing command 'getPlatforms': test1_wrapper|D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1_wrapper/export/test1_wrapper/test1_wrapper.xpfm
+14:03:25 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+14:03:28 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+14:03:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:03:34 INFO  : Jtag cable 'Digilent Basys3 210183B5B094A' is selected.
+14:03:34 INFO  : 'jtag frequency' command is executed.
+14:03:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B5B094A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B5B094A-0362d093-0"}' command is executed.
+14:03:35 INFO  : Device configured successfully with "D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1/_ide/bitstream/test1_wrapper.bit"
+14:03:35 INFO  : Context for processor 'microblaze_0' is selected.
+14:03:35 INFO  : Hardware design and registers information is loaded from 'D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1_wrapper/export/test1_wrapper/hw/test1_wrapper.xsa'.
+14:03:35 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:03:36 INFO  : Context for processor 'microblaze_0' is selected.
+14:03:36 INFO  : System reset is completed.
+14:03:39 INFO  : 'after 3000' command is executed.
+14:03:39 INFO  : Context for processor 'microblaze_0' is selected.
+14:03:39 INFO  : The application 'D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1/Debug/test1.elf' is downloaded to processor 'microblaze_0'.
+14:03:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B5B094A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B5B094A-0362d093-0"}
+fpga -file D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1/_ide/bitstream/test1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1_wrapper/export/test1_wrapper/hw/test1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1/Debug/test1.elf
+----------------End of Script----------------
+
+14:03:39 INFO  : Context for processor 'microblaze_0' is selected.
+14:03:39 INFO  : 'con' command is executed.
+14:03:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:03:39 INFO  : Launch script is exported to file 'D:\testCodes\5934_SoC\hw3_final\vitis_test1\test1_system\_ide\scripts\systemdebugger_test1_system_standalone.tcl'
+14:06:12 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+14:06:14 INFO  : Checking for BSP changes to sync application flags for project 'test1'...
+14:06:17 INFO  : Disconnected from the channel tcfchan#2.
+14:06:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:06:17 INFO  : Jtag cable 'Digilent Basys3 210183B5B094A' is selected.
+14:06:17 INFO  : 'jtag frequency' command is executed.
+14:06:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B5B094A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B5B094A-0362d093-0"}' command is executed.
+14:06:18 INFO  : Device configured successfully with "D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1/_ide/bitstream/test1_wrapper.bit"
+14:06:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:06:18 INFO  : Hardware design and registers information is loaded from 'D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1_wrapper/export/test1_wrapper/hw/test1_wrapper.xsa'.
+14:06:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+14:06:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:06:18 INFO  : System reset is completed.
+14:06:21 INFO  : 'after 3000' command is executed.
+14:06:21 INFO  : Context for processor 'microblaze_0' is selected.
+14:06:22 INFO  : The application 'D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1/Debug/test1.elf' is downloaded to processor 'microblaze_0'.
+14:06:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Basys3 210183B5B094A" && level==0 && jtag_device_ctx=="jsn-Basys3-210183B5B094A-0362d093-0"}
+fpga -file D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1/_ide/bitstream/test1_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1_wrapper/export/test1_wrapper/hw/test1_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/testCodes/5934_SoC/hw3_final/vitis_test1/test1/Debug/test1.elf
+----------------End of Script----------------
+
+14:06:22 INFO  : Context for processor 'microblaze_0' is selected.
+14:06:22 INFO  : 'con' command is executed.
+14:06:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+14:06:22 INFO  : Launch script is exported to file 'D:\testCodes\5934_SoC\hw3_final\vitis_test1\test1_system\_ide\scripts\systemdebugger_test1_system_standalone.tcl'
+14:08:31 INFO  : Disconnected from the channel tcfchan#3.

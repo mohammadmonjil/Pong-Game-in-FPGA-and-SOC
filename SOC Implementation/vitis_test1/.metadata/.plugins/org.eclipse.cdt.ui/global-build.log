@@ -1,0 +1,8 @@
+Nothing to build in platform 'test1_wrapper'
+
+14:06:14 **** Incremental Build of configuration Debug for project test1 ****
+make all 
+make: Nothing to be done for 'all'.
+14:06:15 **** Incremental Build of configuration Debug for project test1_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
