@@ -24,7 +24,7 @@ Both designs support:
 
 ---
 
-## ⚙️ Tools and Hardware
+## Tools and Hardware
 
 - **Vivado Design Suite**
 - **Vitis (for SoC version)**
