@@ -113,5 +113,3 @@ The game state (ball and paddle positions, scores) is updated in software and se
 4. Build and program the FPGA with the C application.
 
 ---
-- **Institution**: University of Florida  
-- **Semester**: Spring 2023
